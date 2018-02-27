@@ -131,7 +131,8 @@
     }
 
     &__title {
-        font-family: "Passion One", sans-serif;
+        // font-family: "Passion One", sans-serif;
+        font-family: "Passion One", "Roboto", sans-serif;
         font-size: 4rem;
         font-weight: 400;
         letter-spacing: 1px;
@@ -189,8 +190,7 @@
         left: 50%;
         letter-spacing: 1px;
         line-height: 145%;
-        position: absolute;
-        position: absolute;
+        position: fixed;
         text-align: center;
         text-transform: uppercase;
         transform: translateX(-50%);

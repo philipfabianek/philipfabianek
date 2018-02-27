@@ -1,0 +1,106 @@
+.about {
+    background-color: #111;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+
+    &__title {
+        border-bottom: 2px solid $white;
+        color: $white;
+        display: inline-block;
+        font-family: "Passion One", "Roboto", sans-serif;
+        font-size: 7rem;
+        font-weight: 400;
+        letter-spacing: 7px;
+        margin-top: 7rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__blocks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 8rem;
+        max-width: 120rem;
+        width: 90%;
+    }
+
+    &__block {
+        border: 1px solid transparent;
+        // display: inline-block;
+        // height: 60rem;
+        margin-top: 6rem;
+        opacity: .4;
+        padding: 4rem 2.6rem;
+        text-align: center;
+        transition: border-color .8s ease, opacity .8s ease;
+        width: 48%;
+
+        cursor: pointer;
+
+        * {
+            cursor: pointer;
+        }
+
+        &:hover, &:focus, &:active {
+            border-color: $white;
+            opacity: 1;
+        }
+
+        &--left {
+            // float: left;
+        }
+
+        &--right {
+            float: right;
+        }
+
+        &__title {
+            color: $white;
+            font-size: 3.4rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+        }
+
+        &__description {
+            color: $white;
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 200%;
+            margin-top: 4rem;
+            text-align: justify;
+        }
+    }
+}
+
+.about__copyright {
+    background-color: #111;
+    bottom: 0;
+    left: 50%;
+    padding: 3rem 0 1rem 0;
+    position: fixed;
+    text-align: center;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 999;
+
+    &__text {
+        color: $white;
+        font-family: Roboto, sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 145%;
+        text-transform: uppercase;
+
+        a {
+            color: $white;
+            font-weight: 400;
+        }
+    }
+}
