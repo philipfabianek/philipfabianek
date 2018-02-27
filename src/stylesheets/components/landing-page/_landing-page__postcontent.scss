@@ -1,0 +1,168 @@
+.landing-page__postcontent {
+
+    &__options {
+        height: 100vh;
+        position: relative;
+        width: 100vw;
+    }
+
+    &__option {
+        align-items: center;
+        background-color: #222;
+        color: $white;
+        cursor: pointer;
+        display: flex;
+        height: 25vh;
+        justify-content: space-around;
+        position: absolute;
+        text-align: center;
+        transform: scale(0);
+        transition: background-color .8s ease, transform 1.6s ease;
+        width: 100vw;
+        z-index: 100;
+
+        @include atSmall {
+
+        }
+
+        @include atMedium {
+            height: 50vh;
+            width: 50vw;
+        }
+
+        * {
+            cursor: pointer;
+        }
+
+        &:hover, &:focus, &:active {
+            background-color: #090909;
+        }
+
+        &__1 {
+            top: 0;
+            border-bottom: 2px solid $white;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                left: 0;
+                top: 0;
+                transform-origin: 100% 100%;
+
+                border: 2px solid $white;
+                border-left: 0;
+                border-top: none;
+            }
+        }
+
+        &__2 {
+            border-bottom: 2px solid $white;
+            top: 25%;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                right: 0;
+                top: 0;
+                transform-origin: 0 100%;
+
+                border: 2px solid $white;
+                border-right: 0;
+                border-top: none;
+            }
+        }
+
+        &__3 {
+            border-bottom: 2px solid $white;
+            top: 50%;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                left: 0;
+                bottom: 0;
+                transform-origin: 100% 0;
+
+                border: 2px solid $white;
+                border-bottom: none;
+                border-left: 0;
+            }
+        }
+
+        &__4 {
+            top: 75%;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                right: 0;
+                bottom: 0;
+                transform-origin: 0 0;
+
+                top: 50%;
+
+                border: 2px solid $white;
+                border-bottom: none;
+                border-right: 0;
+            }
+        }
+
+        &--visible {
+            transform: scale(1);
+        }
+
+        &--choosed {
+            background-color: #090909;
+            border: none;
+            cursor: default;
+
+            height: 100vh;
+            top: 0;
+            transition: height 1.2s ease, top 1.2s ease;
+
+            z-index: 101;
+
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                height: 50vh;
+                top: 50%;
+                transition: transform 1.2s ease;
+                transform: scale(2);
+            }
+
+            &--1 {
+                top: 0;
+                transform-origin: 0 0;
+            }
+
+            &--2 {
+                top: 0;
+                transform-origin: 100% 0;
+            }
+
+            &--3 {
+                transform-origin: 0 100%;
+            }
+
+            &--4 {
+                transform-origin: 100% 100%;
+            }
+        }
+
+        &--not-choosed {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+    }
+}
