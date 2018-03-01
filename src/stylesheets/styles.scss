@@ -1,6 +1,7 @@
 // Base imports
 @import "./base/variables";
 @import "./base/base";
+@import "./base/html";
 
 // Mixins imports
 @import "./mixins/media-queries";
@@ -22,12 +23,22 @@
 @import "./components/landing-page/landing-page--clicked";
 @import "./components/landing-page/landing-page--done";
 
+// Pages
+
+@import "./components/pages";
+
 // About
 
 @import "./components/about/about";
 
 // Contact
 
+@import "./components/contact/contact";
+
 // Features
 
+@import "./components/features/features";
+
 // Portfolio
+
+@import "./components/portfolio/portfolio";

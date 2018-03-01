@@ -2,9 +2,38 @@
     background-color: #111;
     min-height: 100vh;
     overflow-x: hidden;
+    padding-bottom: 12rem;
     position: relative;
     text-align: center;
     width: 100vw;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-color: transparent;
+    }
+
+    // &--transition {
+    //     &:before {
+    //         content: "";
+    //         position: absolute;
+    //         z-index: 1;
+    //
+    //         top: 0;
+    //         right: 0;
+    //         bottom: 0;
+    //         left: 0;
+    //
+    //         background-color: transparent;
+    //     }
+    // }
 
     &__title {
         border-bottom: 2px solid $white;
@@ -24,15 +53,12 @@
         flex-direction: row;
         justify-content: space-between;
         margin: 0 auto;
-        margin-bottom: 8rem;
         max-width: 120rem;
         width: 90%;
     }
 
     &__block {
         border: 1px solid transparent;
-        // display: inline-block;
-        // height: 60rem;
         margin-top: 6rem;
         opacity: .4;
         padding: 4rem 2.6rem;
@@ -72,8 +98,55 @@
             font-weight: 400;
             letter-spacing: 1px;
             line-height: 200%;
-            margin-top: 4rem;
+            // margin-top: 4rem;
             text-align: justify;
+
+            &--first {
+                margin-top: 4rem;
+            }
+        }
+
+        &__icon {
+            display: inline-block;
+            margin: 3rem 0 2rem 0;
+            width: 8rem;
+
+            &--trustworthy {
+
+            }
+
+            &--pricing {
+
+            }
+        }
+    }
+}
+
+.about__redirect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 8rem;
+    max-width: 100rem;
+    width: 90%;
+
+    &__item {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+        cursor: pointer;
+        font-size: 2.2rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        padding: 2rem 8rem;
+        text-transform: uppercase;
+        transition: background-color .5s ease, color .5s ease;
+
+        &:hover, &:focus, &:active {
+            background-color: $white;
+            color: #111;
+            cursor: pointer;
         }
     }
 }
@@ -81,12 +154,10 @@
 .about__copyright {
     background-color: #111;
     bottom: 0;
-    left: 50%;
     padding: 3rem 0 1rem 0;
     position: fixed;
     text-align: center;
-    transform: translateX(-50%);
-    width: 100%;
+    width: 100vw;
     z-index: 999;
 
     &__text {
