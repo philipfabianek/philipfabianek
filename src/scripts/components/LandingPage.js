@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 export default class LandingPage extends React.Component {
     constructor(props) {
         super(props);
@@ -81,33 +83,61 @@ export default class LandingPage extends React.Component {
 
                         <div className="landing-page__postcontent__options">
 
-                            <div
-                                className="landing-page__postcontent__option landing-page__postcontent__option__1"
-                                onClick={this.setPage.bind(this, 0, "/about")}
+                            <Link
+                                title="Detailed information both about my passionate life and professional approach."
+                                to="/about"
                             >
-                                About Me
-                            </div>
+                                <div
+                                    className="landing-page__postcontent__option landing-page__postcontent__option__1"
+                                    // onClick={this.setPage.bind(this, 0, "/about")}
+                                >
+                                    <h3>
+                                        About Me
+                                    </h3>
+                                </div>
+                            </Link>
 
-                            <div
-                                className="landing-page__postcontent__option landing-page__postcontent__option__2"
-                                onClick={this.setPage.bind(this, 1, "/features")}
+                            <Link
+                                title="Good overview about the design and development of my pages and examples of my work"
+                                to="/features"
                             >
-                                Features
-                            </div>
+                                <div
+                                    className="landing-page__postcontent__option landing-page__postcontent__option__2"
+                                    // onClick={this.setPage.bind(this, 1, "/features")}
+                                >
+                                    <h3>
+                                        Features
+                                    </h3>
+                                </div>
+                            </Link>
 
-                            <div
-                                className="landing-page__postcontent__option landing-page__postcontent__option__3"
-                                onClick={this.setPage.bind(this, 2, "/portfolio")}
+                            <Link
+                                title="My portfolio work, view all types of my pages - simple & clean & professional"
+                                to="/portfolio"
                             >
-                                Portfolio
-                            </div>
+                                <div
+                                    className="landing-page__postcontent__option landing-page__postcontent__option__3"
+                                    // onClick={this.setPage.bind(this, 2, "/portfolio")}
+                                >
+                                    <h3>
+                                        Portfolio
+                                    </h3>
+                                </div>
+                            </Link>
 
-                            <div
-                                className="landing-page__postcontent__option landing-page__postcontent__option__4"
-                                onClick={this.setPage.bind(this, 3, "/contact")}
+                            <Link
+                                title="All the ways to contact me and links to all of my social / work medias"
+                                to="/contact"
                             >
-                                Contact
-                            </div>
+                                <div
+                                    className="landing-page__postcontent__option landing-page__postcontent__option__4"
+                                    // onClick={this.setPage.bind(this, 3, "/contact")}
+                                >
+                                    <h3>
+                                        Contact
+                                    </h3>
+                                </div>
+                            </Link>
 
                         </div>
 
@@ -115,7 +145,7 @@ export default class LandingPage extends React.Component {
                 </div>
 
                 <p className="landing-page__copyright">
-                    ©&nbsp;{new Date().getFullYear()}&nbsp;All&nbsp;rights&nbsp;reserved
+                    WEBSITE&nbsp;DEVELOPED&nbsp;BY PHILIP&nbsp;FABIANEK ©&nbsp;{new Date().getFullYear()}
                 </p>
 
             </div>
