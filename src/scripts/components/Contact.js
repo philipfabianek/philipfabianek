@@ -14,6 +14,10 @@ export default class Contact extends React.Component {
         });
     };
 
+    onFormSubmit() {
+        event.preventDefault();
+    };
+
     render() {
         return (
             <div className="contact">
@@ -105,6 +109,39 @@ export default class Contact extends React.Component {
 
                         </div>
                     </div>
+                </div>
+
+                <div className="contact__message">
+                    <form
+                        autoComplete="on"
+                        onSubmit={this.onFormSubmit.bind(this)}
+                    >
+                        <input
+                            name="fullname"
+                            placeholder="Full Name"
+                            type="text"
+                        />
+
+                        <input
+                            name="email"
+                            placeholder="Email"
+                            type="email"
+                        />
+
+                        <input
+                            name="phone"
+                            placeholder="Phone Number (with area code)"
+                            type="tel"
+                        />
+
+                        <textarea
+                            name="emailBody"
+                            placeholder="Message"
+                            type="text"
+                        />
+
+                        <button>SEND</button>
+                    </form>
                 </div>
             </div>
         );

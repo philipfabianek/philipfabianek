@@ -1,0 +1,50 @@
+.contact__blocks {
+    margin: 0 auto;
+    margin-top: 6rem;
+    width: 100%;
+    max-width: 120rem;
+
+    &__block {
+        background-color: $white;
+        // cursor: pointer;
+        display: inline-block;
+        height: 40rem;
+        margin: .6rem .3rem 0 .3rem;
+        overflow: hidden;
+        padding: 2rem;
+        vertical-align: top;
+        width: 48%;
+
+        opacity: 0;
+        transform: translateY(-1rem);
+        visibility: hidden;
+
+        transition: opacity .6s ease, transform .6s ease, visibility .6s ease;
+
+        // * {
+        //     cursor: pointer;
+        // }
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        &__title {
+            font-family: "Roboto", sans-serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-top: 3rem;
+            text-transform: uppercase;
+        }
+
+        &__description {
+            font-size: 1.8rem;
+            letter-spacing: .5px;
+            line-height: 150%;
+            margin-top: 2rem;
+        }
+    }
+}
