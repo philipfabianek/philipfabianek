@@ -45,7 +45,7 @@ export default (props) => {
                 Constantly changing your workflow and
                 the programs you use may be confusing
                 to many people, but this is the only key
-                to remaing at the top.
+                to remain at the top.
             </p>
         </div>
     );

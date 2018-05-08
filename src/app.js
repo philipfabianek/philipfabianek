@@ -1,12 +1,17 @@
+// Polyfills
+import "core-js/es6/map";
+import "core-js/es6/set";
+import "raf/polyfill";
+
+// Styles
+// import "aos/dist/aos.css";
+// import "aos/dist/aos.js";
+import './stylesheets/styles.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import "normalize.css";
-import './stylesheets/styles.scss';
-
 import AppRouter from "./routers/AppRouter";
-
-// import browser from "./scripts/extra/browsers";
 
 ReactDOM.render(
     <AppRouter />,

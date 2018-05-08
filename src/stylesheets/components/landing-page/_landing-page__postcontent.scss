@@ -1,6 +1,7 @@
 .landing-page__postcontent {
 
     &__options {
+        min-height: 40rem;
         height: 100vh;
         position: relative;
         width: 100vw;
@@ -11,6 +12,7 @@
         background-color: #222;
         cursor: pointer;
         display: flex;
+        min-height: 10rem;
         height: 25vh;
         justify-content: space-around;
         position: absolute;
@@ -20,8 +22,32 @@
         width: 100vw;
         z-index: 100;
 
+        &:before {
+            content: "";
+            position: absolute;
+            // z-index: 101;
+            // top: 0;
+            // left: 0;
+            // bottom: 0;
+            // right: 0;
+            // background-color: $white;
+        }
+
         h3 {
             color: $white;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            width: 100%;
+
+            @include atSmall {
+                font-size: 2rem;
+            }
+
+            @include atLarge {
+                font-size: 2.2rem;
+            }
         }
 
         @include atSmall {
@@ -54,9 +80,13 @@
                 top: 0;
                 transform-origin: 100% 100%;
 
-                border: 2px solid $white;
-                border-left: 0;
-                border-top: none;
+                margin-left: -2px;
+                margin-top: -2px;
+                border: none;
+
+                // border: 2px solid $white;
+                // border-left: none;
+                // border-top: none;
             }
         }
 
@@ -73,9 +103,13 @@
                 top: 0;
                 transform-origin: 0 100%;
 
-                border: 2px solid $white;
-                border-right: 0;
-                border-top: none;
+                margin-right: -2px;
+                margin-top: -2px;
+                border: none;
+
+                // border: 2px solid $white;
+                // border-right: none;
+                // border-top: none;
             }
         }
 
@@ -92,9 +126,13 @@
                 bottom: 0;
                 transform-origin: 100% 0;
 
-                border: 2px solid $white;
-                border-bottom: none;
-                border-left: 0;
+                margin-left: -2px;
+                margin-top: 2px;
+                border: none;
+
+                // border: 2px solid $white;
+                // border-bottom: none;
+                // border-left: none;
             }
         }
 
@@ -111,10 +149,13 @@
                 transform-origin: 0 0;
 
                 top: 50%;
+                margin-right: -2px;
+                margin-top: 2px;
+                border: none;
 
-                border: 2px solid $white;
-                border-bottom: none;
-                border-right: 0;
+                // border: 2px solid $white;
+                // border-bottom: none;
+                // border-right: none;
             }
         }
 

@@ -1,5 +1,118 @@
 .features {
+    padding-bottom: 100vh;
     position: relative;
     text-align: center;
     width: 100%;
+
+    &__block {
+        background-color: transparent;
+        // border-bottom: 2rem solid #fff;
+        height: 50vh;
+        min-height: 50rem;
+
+        &--visible {
+            // background-color: $white;
+            // transition: background-color .8s ease;
+            .features__textbox {
+                opacity: 1;
+                transform: translate(-2rem, 0);
+                transition: opacity .6s ease, transform .6s ease;
+            }
+        }
+    }
+
+    &__textbox {
+        background-color: $white;
+        box-shadow: .5rem .5rem 2rem .4rem $black;
+        display: inline-block;
+        padding: 2rem 3rem;
+
+        opacity: 0;
+        transform: translate(-2rem, -2rem);
+
+        p {
+            font-family: "Roboto";
+            font-size: 1.8rem;
+            letter-spacing: .5px;
+            line-height: 145%;
+            text-align: left;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.features__box {
+    background-color: $white;
+    border-radius: 1rem;
+    box-shadow: .5rem .5rem 3rem 1rem $black;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 12rem 2rem;
+
+    margin-right: 100vw;
+    transition: margin .8s ease;
+
+    &--visible {
+        margin-right: 0;
+    }
+
+    &__container {
+        margin: 0 auto;
+        margin-top: 8rem;
+        width: 93%;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: opacity .5s ease, transform .5s ease;
+
+        opacity: 0;
+        transform: translateY(-2rem);
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__description {
+        font-weight: 600;
+        font-size: 2.2rem;
+        letter-spacing: .5px;
+        line-height: 145%;
+        margin: 0 auto;
+        margin-top: 3.6rem;
+        max-width: 60vw;
+        transition: opacity .5s ease, transform .5s ease;
+
+        opacity: 0;
+        transform: translateY(-2rem);
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__boi {
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: .5px;
+        line-height: 145%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        max-width: 60vw;
+        transition: opacity .5s ease, transform .5s ease;
+
+        opacity: 0;
+        transform: translateY(-1rem);
+
+        &--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
