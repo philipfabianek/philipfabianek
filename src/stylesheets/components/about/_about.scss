@@ -23,32 +23,58 @@
     }
 
     &__title {
-        border-bottom: 2px solid $white;
+        // border-bottom: 2px solid $white;
         color: $white;
         display: inline-block;
-        font-family: "Passion One", "Roboto", sans-serif;
-        font-size: 4.8rem;
-        font-weight: 400;
-        letter-spacing: 4px;
+        font-family: "Lato";
+        // font-family: "Passion One", "Roboto", sans-serif;
+        font-size: 4.2rem;
+        font-weight: 700;
+        letter-spacing: 3px;
         margin-top: 6rem;
+        position: relative;
         text-align: center;
         text-transform: uppercase;
 
         @include atSmall {
-            font-size: 5.6rem;
-            letter-spacing: 5px;
+            font-size: 5.2rem;
+            letter-spacing: 4px;
             margin-top: 6.5rem;
         }
 
         @include atMedium {
-            font-size: 6.4rem;
-            letter-spacing: 6px;
+            font-size: 6rem;
+            letter-spacing: 5px;
             margin-top: 7rem;
         }
 
         @include atLarge {
-            font-size: 7.2rem;
+            font-size: 6.4rem;
             margin-top: 8rem;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+
+            background-color: $white;
+            height: .2rem;
+            left: 50%;
+            bottom: -1.6rem;
+            transform: translateX(-50%);
+            width: 9rem;
+
+            @include atSmall {
+                bottom: -1.8rem;
+            }
+
+            @include atMedium {
+                bottom: -2rem;
+            }
+
+            @include atLarge {
+
+            }
         }
     }
 
@@ -80,7 +106,7 @@
         @include atMedium {
             border: 1px solid transparent;
             cursor: pointer;
-            margin-top: 6rem;
+            margin-top: 8rem;
             opacity: .6;
             padding: 3.2rem 1.8rem;
             width: 48%;
@@ -258,7 +284,7 @@
     & {
         background-color: #111;
         bottom: 0;
-        padding: 3rem 6rem 1rem 6rem;
+        padding: 1.6rem 6rem 1rem 6rem;
         position: fixed;
         text-align: center;
         width: 100vw;
@@ -271,7 +297,7 @@
         font-size: 1rem;
         font-weight: 300;
         letter-spacing: 1px;
-        line-height: 145%;
+        line-height: 150%;
         text-transform: uppercase;
 
         a {

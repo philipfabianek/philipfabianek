@@ -5,6 +5,10 @@
         height: 100vh;
         position: relative;
         width: 100vw;
+
+        @include atMedium {
+            min-height: 30rem;
+        }
     }
 
     &__option {
@@ -21,6 +25,16 @@
         transition: background-color .8s ease, transform 1.6s ease;
         width: 100vw;
         z-index: 100;
+
+        @include atSmall {
+
+        }
+
+        @include atMedium {
+            min-height: 15rem;
+            height: 50vh;
+            width: 50vw;
+        }
 
         &:before {
             content: "";
@@ -48,15 +62,6 @@
             @include atLarge {
                 font-size: 2.2rem;
             }
-        }
-
-        @include atSmall {
-
-        }
-
-        @include atMedium {
-            height: 50vh;
-            width: 50vw;
         }
 
         * {
