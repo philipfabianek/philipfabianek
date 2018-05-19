@@ -10,34 +10,27 @@
     }
 
     &__image {
-        background: url("./../public/images/city-540x1080.jpg");
+        background: url("./../public/images/skyline--800x1600.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
 
         @include atSmall {
-            background: url("./../public/images/city-800x600.jpg");
+            background: url("./../public/images/skyline--1920x1080.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
         }
 
-        @include atMedium {
-            background: url("./../public/images/city-1280x720.jpg");
+        @media screen and (min-width: 1921px) {
+            background: url("./../public/images/skyline--2560x1440.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
         }
 
-        @include atLarge {
-            background: url("./../public/images/city-1600x900.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-
-        @media (min-width: 1600px) {
-            background: url("./../public/images/city-1920x1080.jpg");
+        @media screen and (min-width: 2561px) {
+            background: url("./../public/images/skyline--3840x2160.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -55,7 +48,7 @@
     }
 
     &__image-behind {
-        background: url("./../public/images/white-sky.jpg");
+        background: url("./../public/images/test/sky--clouds.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -77,60 +70,13 @@
         z-index: 4;
     }
 
-    &__button {
-        background-color: transparent;
-        border: none;
-        font-size: 1.8rem;
-        font-weight: 600;
-        left: 50%;
-        letter-spacing: 2px;
-        margin: 0 auto;
-        margin-top: 2rem;
-        padding: 1.2rem 5rem;
-        position: relative;
-        text-transform: uppercase;
-        transform: translateX(-50%);
-        transition: color .5s ease;
-
-        @include atSmall {
-            font-size: 2rem;
-            padding: 1.2rem 5.6rem;
-        }
-
-        &:hover, &:focus, &:active {
-            color: $white;
-            cursor: pointer;
-        }
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-
-            background-color: transparent;
-            border: 2px solid #333333;
-            border-radius: 1.1rem;
-            transition: background-color .5s ease, transform .5s ease;
-        }
-
-        &:hover:before, &:focus:before, &:active:before {
-            background-color: #333333;
-            border-radius: 1.1rem;
-            transform: scale(1.1);
-        }
-    }
-
     &__title, &__subtitle {
-        color: #333333;
         text-align: center;
         text-transform: uppercase;
     }
 
     &__title {
+        color: $landing-page-title;
         // font-family: "Passion One", sans-serif;
         font-family: "Passion One", "Roboto", sans-serif;
         font-size: 4rem;
@@ -157,6 +103,7 @@
     }
 
     &__subtitle {
+        color: $landing-page-subtitle;
         font-size: 2.4rem;
         font-weight: 600;
         letter-spacing: 2px;
@@ -181,12 +128,60 @@
         }
     }
 
+    &__button {
+        background-color: transparent;
+        border: none;
+        color: $landing-page-button;
+        font-size: 1.8rem;
+        font-weight: 600;
+        left: 50%;
+        letter-spacing: 2px;
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding: 1.2rem 5rem;
+        position: relative;
+        text-transform: uppercase;
+        transform: translateX(-50%);
+        transition: color .5s ease;
+
+        @include atSmall {
+            font-size: 2rem;
+            padding: 1.2rem 5.6rem;
+        }
+
+        &:hover, &:focus, &:active {
+            color: $landing-page-button-hover-color;
+            cursor: pointer;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            background-color: transparent;
+            border: 2px solid $landing-page-button-border;
+            border-radius: 1.1rem;
+            transition: background-color .5s ease, transform .5s ease;
+        }
+
+        &:hover:before, &:focus:before, &:active:before {
+            background-color: $landing-page-button-hover-background;
+            border-radius: 1.1rem;
+            transform: $landing-page-button-hover-scale;
+        }
+    }
+
     &__copyright {
         bottom: 1rem;
-        color: #eeeeee;
+        color: $landing-page-copyright;
         font-family: Roboto, sans-serif;
         font-size: 1rem;
-        font-weight: 300;
+        font-weight: 500;
         left: 50%;
         letter-spacing: 1px;
         line-height: 145%;
@@ -194,11 +189,11 @@
         text-align: center;
         text-transform: uppercase;
         transform: translateX(-50%);
+        transition: opacity .8s ease;
         z-index: 999;
 
-        a {
-            color: #eeeeee;
-            font-weight: 400;
+        &--hidden {
+            opacity: 0;
         }
     }
 }

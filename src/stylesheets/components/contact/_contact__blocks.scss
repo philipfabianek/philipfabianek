@@ -1,25 +1,39 @@
 .contact__blocks {
     margin: 0 auto;
-    margin-top: 6rem;
+    margin-top: 7.2rem;
     width: 100%;
     max-width: 120rem;
 
     &__block {
-        background-color: $white;
-        // cursor: pointer;
-        display: inline-block;
-        height: 40rem;
-        margin: .6rem .3rem 0 .3rem;
-        overflow: hidden;
-        padding: 2rem;
-        vertical-align: top;
-        width: 48%;
+        & {
+            background-color: $white;
+            // cursor: pointer;
+            display: inline-block;
+            height: 20rem;
+            margin-top: 1rem;
+            opacity: 0;
+            overflow: hidden;
+            padding: 2rem;
+            transform: translateY(-1rem);
+            transition: opacity .6s ease, transform .6s ease, visibility .6s ease;
+            vertical-align: top;
+            visibility: hidden;
+            width: 90%;
 
-        opacity: 0;
-        transform: translateY(-1rem);
-        visibility: hidden;
+            @include atSmall {
 
-        transition: opacity .6s ease, transform .6s ease, visibility .6s ease;
+            }
+
+            @include atMedium {
+                height: 40rem;
+                margin: .6rem .3rem 0 .3rem;
+                width: 48%;
+            }
+
+            @include atLarge {
+
+            }
+        }
 
         // * {
         //     cursor: pointer;
@@ -33,18 +47,25 @@
 
         &__title {
             font-family: "Roboto", sans-serif;
-            font-size: 2.8rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            margin-top: 3rem;
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            margin-top: 1rem;
             text-transform: uppercase;
-        }
 
-        &__description {
-            font-size: 1.8rem;
-            letter-spacing: .5px;
-            line-height: 150%;
-            margin-top: 2rem;
+            @include atSmall {
+
+            }
+
+            @include atMedium {
+                font-size: 2.8rem;
+                letter-spacing: 2px;
+                margin-top: 3rem;
+            }
+
+            @include atLarge {
+
+            }
         }
     }
 }

@@ -72,7 +72,8 @@ module.exports = (env) => {
             contentBase: path.join(__dirname, "public"),
             historyApiFallback: true,
             inline: true,
-            port: 3000
+            port: 3000,
+            watchContentBase: true
         }
     };
 }

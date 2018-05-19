@@ -1,7 +1,7 @@
 .about {
     & {
-        background-color: #111;
-        min-height: 100vh;
+        background-color: $about-top-background;
+        // background-color: #eee;
         overflow-x: hidden;
         padding-bottom: 12rem;
         position: relative;
@@ -9,7 +9,23 @@
         width: 100vw;
     }
 
+    &__top {
+        background-color: $about-top-background;
+        // padding-bottom: 10rem;
+    }
+
+    &__center {
+        min-height: 160vh;
+    }
+
+    &__bottom {
+        background-color: $about-top-background;
+        min-height: 100vh;
+        padding-top: 1rem;
+    }
+
     &:before {
+        background-color: red;
         content: "";
         position: absolute;
         z-index: -1;
@@ -24,7 +40,7 @@
 
     &__title {
         // border-bottom: 2px solid $white;
-        color: $white;
+        color: $about-title;
         display: inline-block;
         font-family: "Lato";
         // font-family: "Passion One", "Roboto", sans-serif;
@@ -94,7 +110,7 @@
     &__block {
         border: 1px solid transparent;
         margin-top: 3rem;
-        opacity: .9;
+        opacity: 1;
         padding: 2.6rem 0;
         text-align: center;
         transition: border-color .8s ease, opacity .8s ease;
@@ -105,15 +121,15 @@
 
         @include atMedium {
             border: 1px solid transparent;
-            cursor: pointer;
+            // cursor: pointer;
             margin-top: 8rem;
-            opacity: .6;
+            opacity: .4;
             padding: 3.2rem 1.8rem;
             width: 48%;
 
-            * {
-                cursor: pointer;
-            }
+            // * {
+            //     cursor: pointer;
+            // }
         }
 
         @include atLarge {
@@ -121,7 +137,14 @@
             padding: 4rem 2.6rem;
         }
 
-        &:hover, &:focus, &:active {
+        // &:hover, &:focus, &:active {
+        //     @include atMedium {
+        //         border-color: $white;
+        //         opacity: 1;
+        //     }
+        // }
+
+        &--visible {
             @include atMedium {
                 border-color: $white;
                 opacity: 1;
@@ -282,7 +305,7 @@
 
 .about__copyright {
     & {
-        background-color: #111;
+        background-color: $about-top-background;
         bottom: 0;
         padding: 1.6rem 6rem 1rem 6rem;
         position: fixed;

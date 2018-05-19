@@ -19,8 +19,8 @@
                 cursor: default;
 
                 &:before {
-                    background-color: #333333;
-                    transform: scale(1.1);
+                    background-color: $landing-page-button-hover-background;
+                    transform: $landing-page-button-hover-scale;
                 }
             }
         }

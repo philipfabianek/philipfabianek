@@ -5,6 +5,8 @@ import { getPosition } from "./../scrollAnimation";
 
 import { Link } from "react-router-dom";
 
+import BottomNavigation from "./reusable/BottomNavigation";
+
 export default class Features extends React.Component {
     constructor(props) {
         super(props);
@@ -84,6 +86,13 @@ export default class Features extends React.Component {
                         </h3>
                     </div>
                 </div>
+
+                <div>
+                    <BottomNavigation
+                        currentPage="features"
+                    />
+                </div>
+
                 {/* <div className="features__block"></div>
                 <div className="features__block features__block--1">
                     <div className="features__textbox">

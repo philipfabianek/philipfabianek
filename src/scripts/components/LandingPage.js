@@ -22,6 +22,8 @@ export default class LandingPage extends React.Component {
         const options = [option1, option2, option3, option4];
 
         setTimeout(() => {
+            document.getElementsByClassName("landing-page__copyright")[0].classList.add("landing-page__copyright--hidden");
+
             options.map((option, i) => {
                 const index = i + 1;
                 setTimeout(() => {
@@ -68,7 +70,7 @@ export default class LandingPage extends React.Component {
                         </h1>
 
                         <h2 className="landing-page__subtitle">
-                            web developer
+                            Web Developer
                         </h2>
 
                         <button className="landing-page__button" onClick={this.changeLandingPage.bind(this)}>

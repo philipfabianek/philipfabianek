@@ -17,15 +17,12 @@ a {
 }
 
 html {
-    background-color: #111;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     font-size: 62.5%;
 }
 
 body {
-    // background-color: $body-default-background;
-    background-color: #111;
     font-family: $body-default-font-family;
     font-size: $base-font-size;
     -webkit-font-smoothing: antialiased;
@@ -66,4 +63,9 @@ button {
     cursor: pointer;
     font-family: $body-default-font-family;
     outline: none;
+}
+
+.display-none {
+    display: none;
+    user-select: auto;
 }
