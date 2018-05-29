@@ -2,6 +2,7 @@
 import "core-js/es6/map";
 import "core-js/es6/set";
 import "raf/polyfill";
+import "./scripts/polyfill";
 
 // Styles
 // import "aos/dist/aos.css";

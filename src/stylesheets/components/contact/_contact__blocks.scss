@@ -1,19 +1,31 @@
 .contact__blocks {
     margin: 0 auto;
-    margin-top: 7.2rem;
+    margin-top: 4.6rem;
     width: 100%;
     max-width: 120rem;
+
+    @include atSmall {
+        margin-top: 5.8rem;
+    }
+
+    @include atMedium {
+        margin-top: 7.2rem;
+    }
+
+    @include atLarge {
+        margin-top: 8.6rem;
+    }
 
     &__block {
         & {
             background-color: $white;
             // cursor: pointer;
             display: inline-block;
-            height: 20rem;
+            // height: 40rem;
             margin-top: 1rem;
             opacity: 0;
             overflow: hidden;
-            padding: 2rem;
+            padding: 2rem 2rem 3rem 2rem;
             transform: translateY(-1rem);
             transition: opacity .6s ease, transform .6s ease, visibility .6s ease;
             vertical-align: top;

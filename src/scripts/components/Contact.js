@@ -28,12 +28,12 @@ export default class Contact extends React.Component {
 
         if (scroll > 300) {
             blocksArray.map((block) => {
-                block.classList += " contact__blocks__block--visible";
+                block.className += " contact__blocks__block--visible";
             });
         } else {
             blocksArray.map((block, i) => {
                 setTimeout(() => {
-                    block.classList += " contact__blocks__block--visible";
+                    block.className += " contact__blocks__block--visible";
                 }, i * 250 + 200);
             });
         }
@@ -108,38 +108,41 @@ export default class Contact extends React.Component {
                 <div className="contact__blocks">
                     <div className="contact__blocks__block">
                         <h2 className="contact__blocks__block__title">
-                            GITHUB
+                            EMAIL
                         </h2>
 
                         <div className="contact__blocks__hover-block">
-                            <img src={Github} className="contact__blocks__hover-block__icon contact__blocks__hover-block__icon--github" />
+                            <img src={Email} className="contact__blocks__hover-block__icon contact__blocks__hover-block__icon--email" />
                             <p className="contact__blocks__hover-block__description">
-                                Add me on Github, view my work and contact me.
+                                Feel free to send me email at any time.
                             </p>
-                            <button
-                                className="contact__blocks__hover-block__button contact__blocks__hover-block__button--copy"
-                                onClick={this.onCopyLink.bind(this, "contact__blocks__hover-block__input--github")}
-                            >
-                                COPY LINK
-                            </button>
+                            <h2 className="contact__blocks__hover-block__bold-text">
+                                fabianekphilip@gmail.com
+                            </h2>
                             {/* <button
+                                className="contact__blocks__hover-block__button contact__blocks__hover-block__button--copy"
+                                onClick={this.onCopyLink.bind(this, "contact__blocks__hover-block__input--email")}
+                            >
+                                COPY EMAIL
+                            </button>
+                            <button
                                 className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
-                            > */}
+                            >
                                 <a
                                     className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
-                                    href="https://github.com/philipfabianek"
+                                    href="https://www.linkedin.com/in/philip-fabianek"
                                     target="_blank"
                                 >
                                     VISIT PAGE
                                 </a>
-                            {/* </button> */}
+                            </button> */}
 
                             <input
-                                className="contact__blocks__hover-block__input contact__blocks__hover-block__input--github"
+                                className="contact__blocks__hover-block__input contact__blocks__hover-block__input--email"
                                 onChange={() => {}}
                                 readOnly
                                 type="text"
-                                value="https://github.com/philipfabianek"
+                                value="fabianekphilip@gmail.com"
                             />
                         </div>
                     </div>
@@ -162,11 +165,12 @@ export default class Contact extends React.Component {
                             </button>
                             {/* <button
                                 className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
-                            > */}
+                                > */}
                                 <a
                                     className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
                                     href="https://www.linkedin.com/in/philip-fabianek"
                                     target="_blank"
+                                    title="Visit my LinkedIn profile"
                                 >
                                     VISIT PAGE
                                 </a>
@@ -184,40 +188,17 @@ export default class Contact extends React.Component {
 
                     <div className="contact__blocks__block">
                         <h2 className="contact__blocks__block__title">
-                            SKYPE
+                            GITHUB
                         </h2>
 
                         <div className="contact__blocks__hover-block">
-                            <img src={Skype} className="contact__blocks__hover-block__icon contact__blocks__hover-block__icon--skype" />
+                            <img src={Github} className="contact__blocks__hover-block__icon contact__blocks__hover-block__icon--github" />
                             <p className="contact__blocks__hover-block__description">
-                                Add me on Skype, view my work and contact me.
+                                Add me on Github, view my work and contact me.
                             </p>
                             <button
                                 className="contact__blocks__hover-block__button contact__blocks__hover-block__button--copy"
-                            >
-                                COPY LINK
-                            </button>
-                            <button
-                                className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
-                            >
-                                VISIT PAGE
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="contact__blocks__block">
-                        <h2 className="contact__blocks__block__title">
-                            TWITTER
-                        </h2>
-
-                        <div className="contact__blocks__hover-block">
-                            <img src={Twitter} className="contact__blocks__hover-block__icon contact__blocks__hover-block__icon--twitter" />
-                            <p className="contact__blocks__hover-block__description">
-                                Follow me on Twitter and send me messages.
-                            </p>
-                            <button
-                                className="contact__blocks__hover-block__button contact__blocks__hover-block__button--copy"
-                                onClick={this.onCopyLink.bind(this, "contact__blocks__hover-block__input--twitter")}
+                                onClick={this.onCopyLink.bind(this, "contact__blocks__hover-block__input--github")}
                             >
                                 COPY LINK
                             </button>
@@ -226,20 +207,47 @@ export default class Contact extends React.Component {
                             > */}
                                 <a
                                     className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
-                                    href="https://twitter.com/philip_fabianek"
+                                    href="https://github.com/philipfabianek"
                                     target="_blank"
+                                    title="Visit my Github page"
                                 >
                                     VISIT PAGE
                                 </a>
                             {/* </button> */}
 
                             <input
-                                className="contact__blocks__hover-block__input contact__blocks__hover-block__input--twitter"
+                                className="contact__blocks__hover-block__input contact__blocks__hover-block__input--github"
                                 onChange={() => {}}
                                 readOnly
                                 type="text"
-                                value="https://twitter.com/philip_fabianek"
+                                value="https://github.com/philipfabianek"
                             />
+                        </div>
+                    </div>
+
+                    <div className="contact__blocks__block">
+                        <h2 className="contact__blocks__block__title">
+                            SKYPE
+                        </h2>
+
+                        <div className="contact__blocks__hover-block">
+                            <img src={Skype} className="contact__blocks__hover-block__icon contact__blocks__hover-block__icon--skype" />
+                            <p className="contact__blocks__hover-block__description">
+                                Add me on Skype, view my work and contact me.
+                            </p>
+                            {/* <button
+                                className="contact__blocks__hover-block__button contact__blocks__hover-block__button--copy"
+                            >
+                                COPY LINK
+                            </button>
+                            <button
+                                className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
+                            >
+                                VISIT PAGE
+                            </button> */}
+                            <h2 className="contact__blocks__hover-block__bold-text contact__blocks__hover-block__bold-text--larger">
+                                Philip Fabianek
+                            </h2>
                         </div>
                     </div>
 
@@ -266,6 +274,7 @@ export default class Contact extends React.Component {
                                     className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
                                     href="https://www.facebook.com/philip.fabianek.5"
                                     target="_blank"
+                                    title="Visit my Facebook profile"
                                 >
                                     VISIT PAGE
                                 </a>
@@ -283,44 +292,46 @@ export default class Contact extends React.Component {
 
                     <div className="contact__blocks__block">
                         <h2 className="contact__blocks__block__title">
-                            EMAIL
+                            TWITTER
                         </h2>
 
                         <div className="contact__blocks__hover-block">
-                            <img src={Email} className="contact__blocks__hover-block__icon contact__blocks__hover-block__icon--email" />
+                            <img src={Twitter} className="contact__blocks__hover-block__icon contact__blocks__hover-block__icon--twitter" />
                             <p className="contact__blocks__hover-block__description">
-                                Feel free to send me email at any time.
+                                Follow me on Twitter and send me messages.
                             </p>
                             <button
                                 className="contact__blocks__hover-block__button contact__blocks__hover-block__button--copy"
-                                onClick={this.onCopyLink.bind(this, "contact__blocks__hover-block__input--email")}
+                                onClick={this.onCopyLink.bind(this, "contact__blocks__hover-block__input--twitter")}
                             >
-                                COPY EMAIL
+                                COPY LINK
                             </button>
                             {/* <button
                                 className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
                             > */}
                                 <a
                                     className="contact__blocks__hover-block__button contact__blocks__hover-block__button--visit"
-                                    href="https://www.linkedin.com/in/philip-fabianek"
+                                    href="https://twitter.com/philip_fabianek"
                                     target="_blank"
+                                    title="Visit my Twitter feed"
                                 >
                                     VISIT PAGE
                                 </a>
                             {/* </button> */}
 
                             <input
-                                className="contact__blocks__hover-block__input contact__blocks__hover-block__input--email"
+                                className="contact__blocks__hover-block__input contact__blocks__hover-block__input--twitter"
                                 onChange={() => {}}
                                 readOnly
                                 type="text"
-                                value="fabianekphilip@gmail.com"
+                                value="https://twitter.com/philip_fabianek"
                             />
                         </div>
                     </div>
+
                 </div>
 
-                <div className="contact__message">
+                {/* <div className="contact__message">
                     <form
                         autoComplete="on"
                         onSubmit={this.onFormSubmit.bind(this)}
@@ -355,7 +366,7 @@ export default class Contact extends React.Component {
                             SEND
                         </button>
                     </form>
-                </div>
+                </div> */}
 
                 <div>
                     <BottomNavigation

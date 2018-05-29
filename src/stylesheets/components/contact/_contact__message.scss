@@ -3,8 +3,7 @@
 
     form {
 
-
-        input {
+        input, textarea {
             border: 1px solid #111;
             cursor: text;
             display: block;
@@ -13,23 +12,23 @@
             margin: 0 auto;
             margin-top: .2rem;
             padding: 1rem 1.4rem;
-            width: 95%;
-            max-width: 60rem;
+            max-width: 116rem;
+            width: 90%;
+
+            @include atMedium {
+                width: 97%;
+            }
+        }
+
+        input {
+
         }
 
         textarea {
-            border: 1px solid #111;
-            cursor: text;
-            display: block;
-            font-size: 2rem;
             height: 20rem;
-            line-height: 150%;
-            margin: 0 auto;
-            margin-top: .2rem;
             padding: 1rem 1.4rem;
             resize: none;
-            width: 95%;
-            max-width: 60rem;
+
         }
     }
 
@@ -45,7 +44,7 @@
         position: relative;
         text-transform: uppercase;
         transition: background-color .4s ease, border-color .4s ease, color .4s ease;
-        width: 95%;
+        width: 90%;
         max-width: 60rem;
 
         &:hover {

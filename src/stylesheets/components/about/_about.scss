@@ -1,7 +1,7 @@
 .about {
     & {
         background-color: $about-top-background;
-        // background-color: #eee;
+        min-height: 100vh;
         overflow-x: hidden;
         padding-bottom: 12rem;
         position: relative;
