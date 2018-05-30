@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import Professional from "./about/Professional";
 import Passionate from "./about/Passionate";
 
 import BottomNavigation from "./reusable/BottomNavigation";
+import Copyright from "./reusable/Copyright";
 
 export default class About extends React.Component {
     constructor(props) {
@@ -77,11 +76,11 @@ export default class About extends React.Component {
                     {/* </div>
                 </div> */}
 
-                <div className="about__copyright">
+                {/* <div className="about__copyright">
                     <p className="about__copyright__text">
                         WEBSITE&nbsp;DEVELOPED&nbsp;BY PHILIP&nbsp;FABIANEK ©&nbsp;{new Date().getFullYear()}
                     </p>
-                </div>
+                </div> */}
             </div>
         );
     };

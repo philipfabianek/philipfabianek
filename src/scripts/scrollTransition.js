@@ -1,5 +1,9 @@
 let elementObjects = [];
 
+export const resetElementObjects = () => {
+    elementObjects = [];
+};
+
 export const checkElement = (elementObject) => {
     const element = elementObject.element;
     const postClassName = elementObject.postClassName;
@@ -40,7 +44,15 @@ export const checkElement = (elementObject) => {
 };
 
 export const addElement = (className, postClassName, offset, extraFunction) => {
-    const element = document.getElementsByClassName(className)[0];
+    let numberOfSameExistingElements = 0;
+
+    elementObjects.map((object) => {
+        if (object.postClassName === postClassName) {
+            numberOfSameExistingElements++;
+        }
+    });
+
+    const element = document.getElementsByClassName(className)[numberOfSameExistingElements];
     const object = {
         element,
         postClassName,

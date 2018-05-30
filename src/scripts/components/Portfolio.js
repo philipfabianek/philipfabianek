@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import BottomNavigation from "./reusable/BottomNavigation";
+import Copyright from "./reusable/Copyright";
 
 export default class Portfolio extends React.Component {
     render() {

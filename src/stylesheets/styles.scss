@@ -15,6 +15,7 @@
 @import "./components/reusable/image";
 @import "./components/reusable/wrapper";
 @import "./components/reusable/link";
+@import "./components/reusable/page";
 
 // Landing page
 
@@ -41,6 +42,9 @@
 // Features
 
 @import "./components/features/features";
+@import "./components/features/features__block";
+@import "./components/features/features__box";
+@import "./components/features/features__textbox";
 
 // Portfolio
 
