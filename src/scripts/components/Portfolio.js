@@ -11,6 +11,10 @@ export default class Portfolio extends React.Component {
                     PORTFOLIO
                 </h1>
 
+                <h2 className="portfolio__text">
+                    Under&nbsp;construction, coming&nbsp;soon!
+                </h2>
+
                 <div>
                     <BottomNavigation
                         currentPage="portfolio"
