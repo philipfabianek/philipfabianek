@@ -55,9 +55,10 @@ export default class Features extends React.Component {
 
         resetElementObjects();
 
-        addElement("features__div", "features__div--visible", 200);
-        addElement("features__div", "features__div--visible", 200);
-        addElement("features__div", "features__div--visible", 200);
+        addElement("features__div", "features__div--visible", 160);
+        addElement("features__div", "features__div--visible", 160);
+        addElement("features__div", "features__div--visible", 160);
+        addElement("features__div", "features__div--visible", 160);
 
         onScroll();
     };
@@ -105,12 +106,54 @@ export default class Features extends React.Component {
                 </div>
 
                 <div className="features__div">
+                    {/* I always adjust look of the website to needs of my client and way that they fit the targeted public. This includes colors, images and overall manipulation of the website. */}
+                    <h2>
+                        Perfect Images
+                    </h2>
+
+                    <p>
+                        I always take my time to find just the right images,
+                        royalty free of course. Unless you provide me
+                        images or give me contact on a professional, I will
+                        find and customize fitting images by myself.
+                        <br/>
+                        <br/>
+                        I do have quite some experience with graphics editors
+                        and I am currently using Adobe Photoshop (for raster graphics)
+                        and Adobe Illustrator (for vector graphics).
+                        I usually just adjust the color, brigtness or contract
+                        of the image, however sometimes I edit the image itself.
+                        <br/>
+                        <br/>
+                        I usually create more versions of the image
+                        for different displays to assure an always
+                        good looking image.
+                    </p>
+                </div>
+
+                <div className="features__div">
                     <h2>
                         Cross-browser functionality
                     </h2>
 
                     <p>
-                        Everything that I do is made to work in all modern browsers. This is very important part of development and I do not skip that at all. This includes the most known browsers both on computer or mobile, for example Google Chrome, Mozilla Firefox, Safari, Opera, Microsoft Edge, Internet Explorer (newer versions), and much more.
+                        Everything that I do is made to work
+                        in all modern browsers.
+                        This is very important part
+                        of development and
+                        I do not skip that at all.
+                        This includes the most known browsers both
+                        on computer or mobile,
+                        for example Google Chrome, Mozilla Firefox,
+                        Safari, Opera, Microsoft Edge,
+                        Internet Explorer (newer versions),
+                        and much more.
+                        <br/>
+                        <br/>
+                        Part of this process is using
+                        many different polyfills, compiling my code
+                        (both CSS and JavaScript) and using
+                        production mode of my libraries.
                     </p>
                 </div>
 
@@ -120,11 +163,32 @@ export default class Features extends React.Component {
                     </h2>
 
                     <p>
-                        I always include source code when I deliver my work. Not only is the project very well structured, but I do follow known patterns both in my CSS and Javasript, for example all my css properties applied on single element are in alphabetical order and I do use the BEM (block__element--modifier) pattern for applying my CSS classes.
+                        I always include source code
+                        when the work is being delivered beside
+                        it living in a Git repository.
+                        Not only is the project very well structured,
+                        but I do follow known patterns
+                        both in my CSS and Javasript,
+                        for example all my stylesheet properties applied
+                        on single element are in logical order (usually alphabetical)
+                        and I do use the BEM (block__element--modifier) pattern
+                        to apply my CSS classes.
+                        <br/>
+                        <br/>
+                        Use of many NPM libraries is a part of my
+                        everyday life and I use them both
+                        for my ideal workflow and for the project itself.
+                        I write JavaScript code using ES6 / ES7 (ECMAScript)
+                        on my daily basis and I often use known
+                        Babel plugins that will most likely be part
+                        of the next ECMAScript release.
+                        I also often create functions
+                        that I reuse in many of my projects instead of
+                        using a full library.
                     </p>
                 </div>
 
-                <div>
+                <div className="features__bottom-navigation"> 
                     <BottomNavigation
                         currentPage="features"
                     />
@@ -176,6 +240,8 @@ export default class Features extends React.Component {
                     </div>
                 </div>
                 <div className="features__block"></div> */}
+
+                <Copyright />
             </div>
         );
     };

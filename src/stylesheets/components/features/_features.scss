@@ -8,33 +8,64 @@
 
     &__div {
         margin: 0 auto;
-        margin-top: 10rem;
-        margin-bottom: 30rem;
-        width: 90vw;
+        margin-top: 5rem;
+        padding: 0 1.6rem;
+        width: 100%;
         max-width: 120rem;
+
+        @include atSmall {
+            margin-top: 7.5rem;
+            padding: 0 2.6rem;
+        }
+
+        @include atMedium {
+            margin-top: 10rem;
+            width: 90vw;
+        }
 
         h2 {
             color: $white;
-            font-size: 3rem;
-            letter-spacing: 2.5px;
-            opacity: 0;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            line-height: 120%;
             text-align: left;
             text-transform: uppercase;
-            transform: translateY(-.6rem);
+
+            @include atSmall {
+                font-size: 2.6rem;
+                letter-spacing: 2.5px;
+            }
+
+            @include atMedium {
+                font-size: 3rem;
+                opacity: 0;
+                transform: translateY(-1rem);
+            }
         }
 
         p {
             color: $white;
             font-family: "Roboto";
             font-weight: 300;
-            font-size: 2rem;
-            letter-spacing: 1px;
+            font-size: 1.7rem;
+            letter-spacing: .5px;
             line-height: 160%;
-            opacity: 0;
-            margin-top: 2.3rem;
-            text-align: justify;
-            transform: translateY(-.2rem);
-            transition-delay: .2s;
+            margin-top: 1.8rem;
+            text-align: left;
+
+            @include atSmall {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+
+            @include atMedium {
+                font-size: 2rem;
+                letter-spacing: 1px;
+                margin-top: 2.3rem;
+                opacity: 0;
+                text-align: justify;
+                transform: translateY(-.4rem);
+            }
         }
     }
 
@@ -49,6 +80,17 @@
             opacity: 1;
             transform: translateY(0);
             transition: opacity .6s ease, transform .6s ease;
+            transition-delay: .2s;
+        }
+    }
+
+    &__bottom-navigation {
+        @include atMedium {
+            padding-top: .6rem;
+        }
+
+        @include atLarge {
+            padding-top: 2rem;
         }
     }
 }

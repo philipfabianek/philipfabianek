@@ -81,6 +81,8 @@ export default class About extends React.Component {
                         WEBSITE&nbsp;DEVELOPED&nbsp;BY PHILIP&nbsp;FABIANEK ©&nbsp;{new Date().getFullYear()}
                     </p>
                 </div> */}
+
+                <Copyright />
             </div>
         );
     };

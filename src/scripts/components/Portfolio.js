@@ -16,6 +16,8 @@ export default class Portfolio extends React.Component {
                         currentPage="portfolio"
                     />
                 </div>
+
+                <Copyright />
             </div>
         );
     };
