@@ -67,6 +67,28 @@
                 transform: translateY(-.4rem);
             }
         }
+
+        a {
+            color: $white;
+            display: block;
+            font-family: "Roboto";
+            font-weight: 300;
+            font-size: 1.7rem;
+            letter-spacing: .5px;
+            line-height: 160%;
+            text-align: left;
+
+            @include atSmall {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+
+            @include atMedium {
+                font-size: 2rem;
+                letter-spacing: 1px;
+                text-align: justify;
+            }
+        }
     }
 
     &__div--visible {
